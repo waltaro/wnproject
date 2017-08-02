@@ -1,10 +1,10 @@
 package com.walterngo.wnproject.data.sampleapi
 
-import com.walterngo.wnproject.domain.model.Sample
+import com.walterngo.wnproject.data.sampleapi.model.SampleData
 
 class SampleApiClient {
 
-    fun getSample(): Sample {
-        return Sample("Hello World")
+    fun getSample(): SampleData {
+        return SampleData("Hello World")
     }
 }
