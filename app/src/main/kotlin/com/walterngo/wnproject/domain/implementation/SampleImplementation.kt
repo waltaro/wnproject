@@ -9,5 +9,4 @@ class SampleImplementation(private val sampleApiClient: SampleApiClient) : Sampl
     override fun getSample(): Sample {
         return sampleApiClient.getSample()
     }
-
 }
