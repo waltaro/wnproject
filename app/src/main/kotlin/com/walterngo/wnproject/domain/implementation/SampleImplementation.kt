@@ -8,6 +8,6 @@ class SampleImplementation(private val sampleApiClient: SampleApiClient,
                            private val sampleMapper: SampleMapper) : SampleRepository {
 
     override fun getSample(): Sample {
-        return sampleMapper.map(sampleApiClient.getSample())
+        return sampleMapper.map(sampleApiClient.getSampleData())
     }
 }
