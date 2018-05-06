@@ -1,4 +1,4 @@
-package com.walterngo.wnproject.injection
+package com.walterngo.wnproject.injection.module
 
 import com.walterngo.wnproject.data.sampleapi.SampleApiClient
 import com.walterngo.wnproject.domain.implementation.SampleImplementation
@@ -16,5 +16,4 @@ class AppModule {
     fun provideSampleImplementation(): SampleRepository {
         return SampleImplementation(SampleApiClient(), SampleMapper())
     }
-
 }

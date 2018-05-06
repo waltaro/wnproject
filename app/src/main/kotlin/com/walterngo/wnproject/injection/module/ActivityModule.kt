@@ -1,4 +1,4 @@
-package com.walterngo.wnproject.injection
+package com.walterngo.wnproject.injection.module
 
 import com.walterngo.wnproject.ui.main.MainActivity
 import dagger.Module
