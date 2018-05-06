@@ -1,9 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
     buildToolsVersion "27.0.3"
+
     defaultConfig {
         applicationId "com.walterngo.wnproject"
         minSdkVersion 21
@@ -12,29 +14,54 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
     }
 }
 
+kapt {
+    mapDiagnosticLocations = true
+}
+
+ext {
+    daggerVersion = '2.16'
+}
+
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
-    api 'com.android.support:appcompat-v7:27.1.1'
-    api 'com.android.support.constraint:constraint-layout:1.1.0'
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // Support Library
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 
-    testImplementation 'junit:junit:4.12'
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Dagger 2
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    // Espresso
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
     })
+
+    // JUnit
+    testImplementation 'junit:junit:4.12'
 }
 
 repositories {
