@@ -1,4 +1,4 @@
-package com.walterngo.wnproject.ui.main
+package com.walterngo.wnproject.presentation.main
 
 import android.os.Bundle
 import com.walterngo.wnproject.R

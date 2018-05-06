@@ -1,6 +1,6 @@
 package com.walterngo.wnproject.injection.module
 
-import com.walterngo.wnproject.ui.main.MainActivity
+import com.walterngo.wnproject.presentation.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
