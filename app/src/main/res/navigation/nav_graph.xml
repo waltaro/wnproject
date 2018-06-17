@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/aboutFragment">
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.walterngo.wnproject.presentation.about.AboutFragment"
+        android:label="@string/menu_title_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/experienceFragment"
+        android:name="com.walterngo.wnproject.presentation.experience.ExperienceFragment"
+        android:label="menu_title_experience"
+        tools:layout="@layout/fragment_experience" />
+
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.walterngo.wnproject.presentation.contact.ContactFragment"
+        android:label="menu_title_contact"
+        tools:layout="@layout/fragment_contact" />
+
+</navigation>
