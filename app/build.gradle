@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion "28.0.0"
 
     defaultConfig {
@@ -34,13 +35,15 @@ kapt {
 
 ext {
     daggerVersion = '2.16'
+    supportVersion = '28.0.0-alpha3'
 }
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
     // Support Library
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:design:$supportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 
     // Kotlin
