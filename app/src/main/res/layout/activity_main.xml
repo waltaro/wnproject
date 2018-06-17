@@ -7,12 +7,12 @@
     tools:context="com.walterngo.wnproject.presentation.main.MainActivity">
 
     <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/mainFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        app:navGraph="@navigation/nav_graph"
-        app:defaultNavHost="true" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
