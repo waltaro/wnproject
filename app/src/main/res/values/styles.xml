@@ -8,9 +8,7 @@
     </style>
 
     <style name="AppTheme" parent="@style/AppThemeBase">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:navigationBarColor">@color/primaryDark</item>
     </style>
 
 </resources>
