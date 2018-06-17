@@ -13,13 +13,13 @@
     <fragment
         android:id="@+id/experienceFragment"
         android:name="com.walterngo.wnproject.presentation.experience.ExperienceFragment"
-        android:label="menu_title_experience"
+        android:label="@string/menu_title_experience"
         tools:layout="@layout/fragment_experience" />
 
     <fragment
         android:id="@+id/contactFragment"
         android:name="com.walterngo.wnproject.presentation.contact.ContactFragment"
-        android:label="menu_title_contact"
+        android:label="@string/menu_title_contact"
         tools:layout="@layout/fragment_contact" />
 
 </navigation>
