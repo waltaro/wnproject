@@ -36,6 +36,7 @@ kapt {
 ext {
     daggerVersion = '2.16'
     supportVersion = '28.0.0-alpha3'
+    navCompVersion = "1.0.0-alpha02"
 }
 
 dependencies {
@@ -45,6 +46,10 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$supportVersion"
     implementation "com.android.support:design:$supportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    // Architecture Components
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navCompVersion"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navCompVersion"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
