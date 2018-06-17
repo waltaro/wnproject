@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary Colours -->
     <color name="primary">#263238</color>
     <color name="primaryDark">#102027</color>
     <color name="primaryLight">#62727b</color>
-    <color name="accent">#00BFA5</color>
+
+    <!-- Secondary Colours -->
+    <color name="secondary">#00BFA5</color>
+    <color name="secondaryDark">#008e77</color>
+    <color name="secondaryLight">#5df2d7</color>
 </resources>
